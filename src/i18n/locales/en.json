@@ -1,0 +1,12 @@
+{
+  "welcome": "Welcome to my portfolio",
+  "about": "About",
+  "projects": "Projects",
+  "skills": "Skills",
+  "contact": "Contact",
+  "aboutMe": "About Me",
+  "aboutDescription": "My name is xxxxxxxxx, I recently graduated with a degree in Computer Systems Engineering from the Autonomous University of Aguascalientes. During my time at university, I participated in cybersecurity hackathons, data analysis courses, competitive programming, and organized various activities for the university community.",
+  "developerText": "Web & Mobile (Android) Developer",
+  "experienceTitle": "What is my experience?",
+  "experienceDescription": "I specialize in mobile development for Android, with experience in building scalable and efficient applications. I have worked on projects ranging from educational apps to e-commerce solutions, using modern technologies such as Kotlin, Jetpack Compose, and Firebase."
+}

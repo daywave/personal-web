@@ -1,0 +1,12 @@
+{
+  "welcome": "Bienvenido a mi portafolio",
+  "about": "Sobre mí",
+  "projects": "Proyectos",
+  "skills": "Habilidades",
+  "contact": "Contacto",
+  "aboutMe": "Sobre Mí",
+  "aboutDescription": "Mi nombre es xxxxxxxxx, soy recién egresado de la carrera de Ingeniería en Sistemas Computacionales de la Universidad Autónoma de Aguascalientes. Durante mi tiempo en la universidad, participé en hackatones de ciberseguridad, cursos de análisis de datos, programación competitiva y en la organización de distintas actividades para la comunidad universitaria.",
+  "developerText": "Desarrollador Web & Móvil (Android)",
+  "experienceTitle": "¿Cuál es mi experiencia?",
+  "experienceDescription": "Me especializo en desarrollo móvil para Android, con experiencia en la creación de aplicaciones escalables y eficientes. He trabajado en proyectos que van desde aplicaciones educativas hasta soluciones de comercio electrónico, utilizando tecnologías modernas como Kotlin, Jetpack Compose y Firebase."
+}
