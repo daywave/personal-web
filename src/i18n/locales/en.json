@@ -1,12 +1,38 @@
 {
-  "welcome": "Welcome to my portfolio",
+  "welcome": "Welcome to my digital cv",
   "about": "About",
   "projects": "Projects",
   "skills": "Skills",
   "contact": "Contact",
   "aboutMe": "About Me",
-  "aboutDescription": "My name is xxxxxxxxx, I recently graduated with a degree in Computer Systems Engineering from the Autonomous University of Aguascalientes. During my time at university, I participated in cybersecurity hackathons, data analysis courses, competitive programming, and organized various activities for the university community.",
-  "developerText": "Web & Mobile (Android) Developer",
+  "aboutDescription": "My name is Donovan Jerez, I recently graduated with a degree in Computer Systems Engineering from the Autonomous University of Aguascalientes. During my time at university, I participated in cybersecurity hackathons, data analysis courses, competitive programming, and organized various activities for the university community.",
+  "developerText": "Flutter developer (Android & iOs)",
   "experienceTitle": "What is my experience?",
-  "experienceDescription": "I specialize in mobile development for Android, with experience in building scalable and efficient applications. I have worked on projects ranging from educational apps to e-commerce solutions, using modern technologies such as Kotlin, Jetpack Compose, and Firebase."
+  "experiences": [
+    {
+      "company": "Posibilidades",
+      "period": "February 2025 - Present",
+      "description": "Lead Support Organizer for university-wide congress, demonstrating strong organizational and leadership skills. Active Participant & Organizer in internal programming competitions, showcasing competitive programming abilities and event coordination. Competed in National and International CTF Hackathons, highlighting expertise in cybersecurity, problem-solving, and critical thinking. Completed coursework in Data Analysis and Bot Programming, indicating proficiency in data interpretation, automation, and relevant technical skills.",
+      "skills": "Dart, Flutter, DBA, Clean Architecture,Legacy code, Trello, Google workspace, PHP with Laravel, CPanel, MySQL, NodeJs, MongoDB, firebase"
+    },
+    {
+      "company": "Depfly",
+      "period": "July 2024 - November 2024",
+      "description": "I collaborated as an intern doing testing, solving visual issues, calculations, and integration problems. I also developed new implementations. In this area, I worked with only one Senior programmer.",
+      "skills": "Dart, Flutter, Testing, SCRUM, KANBAN, Trello, Clean Architecture, MVC, PHP with Laravel, firebase "
+    },
+    {
+      "company": "IEA",
+      "period": "February 2024 - August 2024",
+      "description": "I participated in the development of a new website. The development required client requirement analysis, as well as analysis of existing content from the previous website. The development required only one person and a Senior programmer who was in charge of supervising the security and quality of the project.",
+      "skills": "Vue.js, JavaScript, Google Docs, KANBAN, TRELLO, Slack"
+    }
+  ],
+  "techText": "Skills and Technologies",
+  "categories": [
+    {
+      "name": "Bases de datos",
+      "skills": "Redis, Hbase, MySQL"
+    }
+  ]
 }

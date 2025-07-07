@@ -1,12 +1,40 @@
 {
-  "welcome": "Bienvenido a mi portafolio",
+  "welcome": "Bienvenido a mi cv digital",
   "about": "Sobre mí",
   "projects": "Proyectos",
   "skills": "Habilidades",
   "contact": "Contacto",
   "aboutMe": "Sobre Mí",
-  "aboutDescription": "Mi nombre es xxxxxxxxx, soy recién egresado de la carrera de Ingeniería en Sistemas Computacionales de la Universidad Autónoma de Aguascalientes. Durante mi tiempo en la universidad, participé en hackatones de ciberseguridad, cursos de análisis de datos, programación competitiva y en la organización de distintas actividades para la comunidad universitaria.",
+  "aboutDescription": "Mi nombre es Donovan Jerez, soy recién egresado de la carrera de Ingeniería en Sistemas Computacionales de la Universidad Autónoma de Aguascalientes. Durante mi tiempo en la universidad, participé en hackatones de ciberseguridad, cursos de análisis de datos, programación competitiva y en la organización de distintas actividades para la comunidad universitaria.",
   "developerText": "Desarrollador Web & Móvil (Android)",
   "experienceTitle": "¿Cuál es mi experiencia?",
-  "experienceDescription": "Me especializo en desarrollo móvil para Android, con experiencia en la creación de aplicaciones escalables y eficientes. He trabajado en proyectos que van desde aplicaciones educativas hasta soluciones de comercio electrónico, utilizando tecnologías modernas como Kotlin, Jetpack Compose y Firebase."
+  "experiences": [
+    {
+      "company": "Posibilidades",
+      "period": "February 2025 - Present",
+      "description": "Lideré iniciativas de desarrollo móvil de la empresa utilizando Flutter, Laravel y NodeJs. Gestión de 3 proyectos activos y refactorización de código heredado. Diseñé e implementé bases de datos relacionales, analizando y refactorizando arquitecturas existentes. Resolví problemas críticos en repositorios de GitHub y utilicé Google Workspace para la gestión de proyectos. Apliqué principios de Ingeniería y Arquitectura de Software para entregar resultados bajo presión y con objetivos estrictos.",
+      "skills": "Dart, Flutter, DBA, Clean Architecture,Legacy code, Trello, Google workspace, PHP with Laravel, CPanel, MySQL, NodeJs, MongoDB, firebase"
+    },
+    {
+      "company": "Depfly",
+      "period": "Julio 2024 - Noviembre 2024",
+      "description": "Colabore como becario haciendo testing  llegando a la solución de problemas visuales, calculos, y de integración. Así mismo desarrollé nuevas implementaciones. En ésta área trabajé solo con unprogramador Sr.",
+      "skills": "Dart, Flutter, Testing, SCRUM, KANBAN, trello"
+
+    
+    },
+    {
+      "company": "IEA",
+      "period": "Febrero 2024 - Agosto 202",
+      "description": "Participé en el desarrollo de una nueva página web, el desarrolló requirió análisis de requeriemientos con cliente, así como el análisis del contenido existente en el sitio web anterior, el desarrolló requirió solo de una persona y un programador Sr que se encargaba de supervisar la seguirdad y la calidad del proyecto.",
+      "skills": "Vue.js, JavaScript, google docs, KANBAN, TRELLO, Slack. "
+    }
+  ],
+  "techText": "Habilidades y tecnologías",
+  "categories": [
+    {
+      "name: ": "Bases de datos",
+      "skills: ": "Redis, Hbase, MySQL"
+    }
+  ]
 }

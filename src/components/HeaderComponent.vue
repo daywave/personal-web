@@ -47,12 +47,12 @@ export default {
     // Simulación de comandos en la terminal
     new Typed(this.$refs.typedElement, {
       strings: [
-        'npm run dev',
+        'flutter create landing_page',
         'git commit -m "Initial commit"',
-        'sudo apt-get update',
-        'echo "Hello, World!"',
-        'cd projects',
-        'ls -la',
+        'flutter emulators',
+        'git branch -all',
+        'flutter run',
+        'npm run dev',
       ],
       typeSpeed: 50,
       backSpeed: 30,

@@ -1,137 +1,160 @@
 <template>
-    <section id="experience" class="experience-section">
-      <h2>{{ $t('experienceTitle') }}</h2>
-      <div class="experience-content">
-        <div class="experience-list">
-          <div class="experience-item" v-for="(exp, index) in experiences" :key="index">
-            <h3>{{ exp.company }} <span class="period">[{{ exp.period }}]</span></h3>
-            <p>{{ exp.description }}</p>
-            <p>{{ $t('experienceDescription') }}</p>
+  <section id="experience" class="experience-section">
+    <h2>{{ $t('experienceTitle') }}</h2>
+    <div class="experience-content">
+      <div class="terminal-container">
+        <div class="terminal" v-for="(exp, index) in $tm('experiences')" :key="index">
+          <div class="terminal-header">
+            <div class="terminal-buttons">
+              <span class="terminal-btn red"></span>
+              <span class="terminal-btn yellow"></span>
+              <span class="terminal-btn green"></span>
+            </div>
+            <span class="terminal-title">{{ exp.company }} — {{ exp.period }}</span>
           </div>
-        </div>
-        <div class="phone-animation">
-          <div class="phone">
-            <div class="screen">
-              <div class="language-text">
-                <span ref="kotlinText">Kotlin</span>
-                <span ref="dartText">Dart</span>
-                <span ref="vueText">VueJs</span>
-              </div>
+          <div class="terminal-body">
+            <pre class="terminal-text">{{ formatTerminalText(exp.description) }}</pre>
+            <div class="terminal-skills">
+              <pre>> {{ $t('techText') }}:</pre>
+              <pre>{{ formatSkills(exp.skills) }}</pre>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </template>
-  
-  <script>
-  import { gsap } from 'gsap';
-  
-  export default {
-    name: 'ExperienceComponent',
-    data() {
-      return {
-        experiences: [
-          {
-            company: 'Nombre Empresa 1',
-            period: 'Ene 2022 - Dic 2022',
-            description: 'Desarrollé aplicaciones móviles nativas para Android utilizando Kotlin y Jetpack Compose, integrando APIs REST y Firebase para la gestión de datos.',
-          },
-          {
-            company: 'Nombre Empresa 2',
-            period: 'Mar 2021 - Dic 2021',
-            description: 'Colaboré en el desarrollo de una aplicación educativa multiplataforma usando Flutter (Dart), implementando funcionalidades como autenticación y bases de datos locales.',
-          },
-        ],
-      };
+    </div>
+  </section>
+</template>
+
+<script>
+import { gsap } from 'gsap';
+
+export default {
+  name: 'ExperienceComponent',
+  methods: {
+    formatTerminalText(text) {
+      return `> ${text.replace(/\. /g, '.\n> ')}`;
     },
-    mounted() {
-      // Animación del teléfono móvil
-      gsap.from('.phone', {
-        y: 50,
-        opacity: 0,
-        duration: 1.5,
-        delay: 0.5,
-        ease: 'power2.out',
-      });
-  
-      // Animación de los textos dentro del teléfono
+    formatSkills(skills) {
+      return skills.split(',').map(skill => `- ${skill.trim()}`).join('\n');
+    }
+  },
+  mounted() {
+    // Animación para las terminales
+    gsap.from('.terminal', {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.3,
+      ease: 'power2.out'
+    });
+
+    // Animación del teléfono
+    gsap.from('.phone', {
+      y: 50,
+      opacity: 0,
+      duration: 1.5,
+      delay: 0.8,
+      ease: 'power2.out',
+    });
+
+    if (this.$refs.kotlinText) {
       gsap.from(this.$refs.kotlinText, {
         x: -50,
-        opacity: 0,
-        duration: 1,
-        delay: 1,
-        ease: 'power2.out',
-      });
-  
-      gsap.from(this.$refs.dartText, {
-        x: 50,
         opacity: 0,
         duration: 1,
         delay: 1.5,
         ease: 'power2.out',
       });
-  
-      // Efecto de parpadeo en los textos
-      gsap.to([this.$refs.kotlinText, this.$refs.dartText, this.$refs.vueText], {
-        opacity: 0.5,
+    }
+
+    if (this.$refs.dartText) {
+      gsap.from(this.$refs.dartText, {
+        x: 50,
+        opacity: 0,
         duration: 1,
-        repeat: -1,
-        yoyo: true,
-        ease: 'power1.inOut',
+        delay: 1.8,
+        ease: 'power2.out',
       });
-    },
-  };
-  </script>
+    }
+  }
+};
+</script>
+
   
   <style scoped>
-  .experience-section {
-    padding: 2rem;
-    background-color: #1e1e1e;
-    color: #00ff00;
-    border-bottom: 1px solid #333;
-  }
-  
-  .experience-section h2 {
-    font-family: 'Courier New', monospace;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
   .experience-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .experience-list {
-    flex: 1;
-  }
-  
-  .experience-item {
-    margin-bottom: 1.5rem;
-  }
-  
-  .experience-item h3 {
-    font-family: 'Courier New', monospace;
-    font-size: 1.2rem;
-    color: #00ff00;
-    margin-bottom: 0.5rem;
-  }
-  
-  .experience-item .period {
-    color: #00cc00;
-    font-size: 0.9rem;
-  }
-  
-  .experience-item p {
-    font-family: 'Courier New', monospace;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #00ff00;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.terminal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.terminal {
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  color: #f0f0f0;
+  font-family: 'Courier New', monospace;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  background: #3a3a3a;
+  padding: 0.5rem 1rem;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+.terminal-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-btn.red { background: #ff5f56; }
+.terminal-btn.yellow { background: #ffbd2e; }
+.terminal-btn.green { background: #27c93f; }
+
+.terminal-title {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+}
+
+.terminal-text {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+.terminal-skills {
+  margin-top: 1.5rem;
+  color: #4fc3f7;
+}
+
+.terminal-skills pre {
+  margin: 0.5rem 0;
+}
+
   
   .phone-animation {
     flex: 1;

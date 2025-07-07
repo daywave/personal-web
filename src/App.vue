@@ -15,6 +15,7 @@ import LanguageSwitcher from './components/LanguageSwitcher.vue';
 import AboutComponent from './components/AboutComponent.vue';
 import ExperienceComponent from './components/ExperienceComponent.vue';
 
+
 export default {
   name: 'App',
   components: {
@@ -22,7 +23,8 @@ export default {
     HeaderComponent,
     AboutComponent,
     LanguageSwitcher,
-    ExperienceComponent
+    ExperienceComponent,
+
   },
 };
 </script>
